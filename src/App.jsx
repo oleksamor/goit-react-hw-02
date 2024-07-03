@@ -19,9 +19,7 @@ const App = () => {
       </p>
 
       <Options />
-      {/* <Options nameBtn="Neutral" />
-      <Options nameBtn="Bad" />
-      <Options nameBtn="Reset" /> */}
+
       <Feedback reviewsType="Good :" />
     </>
   );

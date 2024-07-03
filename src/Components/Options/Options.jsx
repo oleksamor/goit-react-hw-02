@@ -1,26 +1,30 @@
+import { useState } from "react";
+
 const Options = () => {
+  const [counter, setCounter] = useState(0);
+
   const handleGoodClick = () => {
-    console.log("Good click");
+    setCounter(counter + 1);
   };
-  const handleNeutralClick = () => {
-    console.log("Neutral click");
-  };
-  const handleBadClick = (name1) => {
-    console.log(`Bad click ${name1}`);
-  };
-  const handleResetClick = (e) => {
-    console.log(e);
+  const handleNeutralClick = () => {};
+  const handleBadClick = () => {};
+  const handleResetClick = () => {
+    setCounter(0);
   };
 
   return (
     <div>
+      <div>
+        <h1>{counter}</h1>
+      </div>
+
       <button onClick={handleGoodClick} className="btn">
         Good
       </button>
       <button onClick={handleNeutralClick} className="btn">
         Neutral
       </button>
-      <button onClick={() => handleBadClick("Alex")} className="btn">
+      <button onClick={handleBadClick} className="btn">
         Bad
       </button>
       <button onClick={handleResetClick} className="btn">
