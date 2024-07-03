@@ -1,11 +1,7 @@
-export const Feedback = () => {
+const Feedback = ({ typesOfReviews }) => {
   return (
     <div>
-      <p>Good:</p>
-      <p>Neutral:</p>
-      <p>Bad:</p>
-      <p>Total:</p>
-      <p>Positive:</p>
+      <p>{typesOfReviews}</p>
     </div>
   );
 };
