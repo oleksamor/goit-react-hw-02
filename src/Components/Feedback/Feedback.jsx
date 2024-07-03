@@ -1,7 +1,7 @@
-const Feedback = ({ typesOfReviews }) => {
+const Feedback = ({ reviewsType }) => {
   return (
     <div>
-      <p>{typesOfReviews}</p>
+      <p>{reviewsType}</p>
     </div>
   );
 };

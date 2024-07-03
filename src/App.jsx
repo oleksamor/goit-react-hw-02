@@ -4,11 +4,11 @@ import Feedback from "./Components/Feedback/Feedback";
 import Options from "./Components/Options/Options";
 
 const App = () => {
-  const [typesOfReviews, settypesOfReviews] = useState({
-    good: 0,
-    neutral: 0,
-    bad: 0,
-  });
+  // const [reviewsType, setreviewsType] = useState({
+  //   good: 0,
+  //   neutral: 0,
+  //   bad: 0,
+  // });
 
   return (
     <>
@@ -18,13 +18,11 @@ const App = () => {
         options below.
       </p>
 
-      <Options nameBtn="Good" />
-      <Options nameBtn="Neutral" />
+      <Options />
+      {/* <Options nameBtn="Neutral" />
       <Options nameBtn="Bad" />
-      <Options nameBtn="Reset" />
-      <Feedback typesOfReviews="Good :" />
-      <Feedback typesOfReviews="Neutral :" />
-      <Feedback typesOfReviews="Bad :" />
+      <Options nameBtn="Reset" /> */}
+      <Feedback reviewsType="Good :" />
     </>
   );
 };
