@@ -1,21 +1,31 @@
 import { useState } from "react";
 
 const Options = () => {
-  const [counter, setCounter] = useState(0);
+  const [counterGood, setCounterGood] = useState(0);
+  const [counterBad, setCounterBad] = useState(0);
+  const [counterNeutral, setCounterNeutral] = useState(0);
 
   const handleGoodClick = () => {
-    setCounter(counter + 1);
+    setCounterGood(counterGood + 1);
   };
-  const handleNeutralClick = () => {};
-  const handleBadClick = () => {};
+  const handleNeutralClick = () => {
+    setCounterNeutral(counterNeutral + 1);
+  };
+  const handleBadClick = () => {
+    setCounterBad(counterBad + 1);
+  };
   const handleResetClick = () => {
-    setCounter(0);
+    setCounterGood(0);
+    setCounterBad(0);
+    setCounterNeutral(0);
   };
 
   return (
     <div>
       <div>
-        <h1>{counter}</h1>
+        <h1>
+          {counterGood} {counterNeutral} {counterBad}
+        </h1>
       </div>
 
       <button onClick={handleGoodClick} className="btn">
