@@ -2,6 +2,7 @@
   margin-left: 40px;
   color: black;
   font-style: normal;
+  /* font: var(font-family); */
 }
 
 .text {
