@@ -1,0 +1,11 @@
+.title {
+  margin-left: 40px;
+  color: rgb(140, 103, 79);
+  font-style: italic;
+}
+
+.text {
+  font-style: italic;
+  margin-left: 40px;
+  font-size: 20px;
+}

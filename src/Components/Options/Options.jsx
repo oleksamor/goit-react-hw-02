@@ -1,45 +1,22 @@
-import { useState } from "react";
+import s from "./Options.module.css";
 
-const Options = () => {
-  const [counterGood, setCounterGood] = useState(0);
-  const [counterBad, setCounterBad] = useState(0);
-  const [counterNeutral, setCounterNeutral] = useState(0);
-
-  const handleGoodClick = () => {
-    setCounterGood(counterGood + 1);
-  };
-  const handleNeutralClick = () => {
-    setCounterNeutral(counterNeutral + 1);
-  };
-  const handleBadClick = () => {
-    setCounterBad(counterBad + 1);
-  };
-  const handleResetClick = () => {
-    setCounterGood(0);
-    setCounterBad(0);
-    setCounterNeutral(0);
-  };
-
+const Options = ({ updateFeedback, totalFeedback, handleReset }) => {
   return (
     <div>
-      {/* <div>
-        <h1>
-          {counterGood} {counterNeutral} {counterBad}
-        </h1>
-      </div> */}
-
-      <button onClick={handleGoodClick} className="btn">
+      <button className={s.button} onClick={() => updateFeedback("good")}>
         Good
       </button>
-      <button onClick={handleNeutralClick} className="btn">
+      <button className={s.button} onClick={() => updateFeedback("neutral")}>
         Neutral
       </button>
-      <button onClick={handleBadClick} className="btn">
+      <button className={s.button} onClick={() => updateFeedback("bad")}>
         Bad
       </button>
-      <button onClick={handleResetClick} className="btn">
-        Reset
-      </button>
+      {totalFeedback > 0 && (
+        <button className={s.button} onClick={handleReset}>
+          Reset
+        </button>
+      )}
     </div>
   );
 };
