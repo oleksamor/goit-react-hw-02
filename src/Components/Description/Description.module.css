@@ -1,11 +1,11 @@
 .title {
   margin-left: 40px;
-  color: rgb(140, 103, 79);
-  font-style: italic;
+  color: black;
+  font-style: normal;
 }
 
 .text {
-  font-style: italic;
+  font-style: normal;
   margin-left: 40px;
   font-size: 20px;
 }
