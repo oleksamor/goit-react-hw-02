@@ -20,7 +20,7 @@ const App = () => {
 
       <Options />
 
-      <Feedback reviewsType="Good :" />
+      <Feedback />
     </>
   );
 };

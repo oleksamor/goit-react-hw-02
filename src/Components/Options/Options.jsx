@@ -22,11 +22,11 @@ const Options = () => {
 
   return (
     <div>
-      <div>
+      {/* <div>
         <h1>
           {counterGood} {counterNeutral} {counterBad}
         </h1>
-      </div>
+      </div> */}
 
       <button onClick={handleGoodClick} className="btn">
         Good
